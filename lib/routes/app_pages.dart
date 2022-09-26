@@ -23,6 +23,20 @@ class AppPages{
           IntroductionBinding(),
         ]
     ),
+    GetPage(
+        name: AppRoutes.SIGNIN,
+        page: () => const IntroductionPage(),
+        bindings: [
+          IntroductionBinding(),
+        ]
+    ),
+    GetPage(
+        name: AppRoutes.SIGNUP,
+        page: () => const IntroductionPage(),
+        bindings: [
+          IntroductionBinding(),
+        ]
+    ),
   ];
 
 }
