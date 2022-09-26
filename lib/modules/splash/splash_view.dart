@@ -6,7 +6,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 import 'splash_logic.dart';
 
-class SplashPage extends StatelessWidget {
+class SplashPage extends GetView<SplashLogic> {
   const SplashPage({Key? key}) : super(key: key);
 
   @override

@@ -1,6 +1,12 @@
 import 'package:get/get.dart';
 
 class SignupLogic extends GetxController {
+
+  @override
+  void onInit() {
+    super.onInit();
+  }
+
   @override
   void onReady() {
     // TODO: implement onReady

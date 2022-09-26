@@ -6,7 +6,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 import 'introduction_logic.dart';
 
-class IntroductionPage extends StatelessWidget {
+class IntroductionPage extends GetView<IntroductionLogic> {
   const IntroductionPage({Key? key}) : super(key: key);
 
   @override

@@ -24,7 +24,7 @@ class SplashPageMobilePortrait extends GetView<SplashLogic> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SvgPicture.asset(Images.splash_logo),
-            Texts.texts(texts: "Cryptocurrency",align: TextAlign.center,textSize: FontSizes.LARGE,fontWeight: FontWeight.w500,uds: 30.0),
+            Texts.texts(texts: "Cryptocurrency",align: TextAlign.center,textSize: FontSizes.LARGE,fontWeight: FontWeight.w500,t: 30.0,b: 30.0),
           ],
         ),
       ),

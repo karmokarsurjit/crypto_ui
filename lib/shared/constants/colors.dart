@@ -11,7 +11,9 @@ class ConstColors {
   static const Color FIELD_OUTLINE = Color(0xFF8D8D8D);
 
   static const Color TEXTWHITE = Color(0xFFFFFFFF);
+  static const Color TEXTGREY = Color(0xFF8D8D8D);
   static const Color TEXTBLUE = Color(0xFF4B12EF);
+
 }
 
 Color hexToColor(String hex) {

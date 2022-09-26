@@ -3,11 +3,11 @@ import 'package:crypto_ui/widgets/texts.dart';
 import 'package:flutter/material.dart';
 
 class Buttons {
-  static regularButton({height, width, btnColor=ConstColors.BUTTON, texts, fontWeight, textSize, textColor, textAlign, onPressed, l=0.0,t=0.0,r=0.0,b=0.0}) {
+  static regularButton({ width, btnColor=ConstColors.BUTTON, texts, fontWeight, textSize, textColor, textAlign, onPressed, l=0.0,t=0.0,r=0.0,b=0.0}) {
     return Padding(
       padding: EdgeInsets.fromLTRB(l,t,r,b),
       child: SizedBox(
-        height: height,
+        height: 50.0,
         width: width,
         child: ElevatedButton(
           onPressed: () => onPressed(),
