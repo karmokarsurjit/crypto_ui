@@ -84,9 +84,9 @@ class SigninPageMobilePortrait extends GetView<SigninLogic> {
                   texts: "Forgot password?",
                   color: ConstColors.TEXTGREY,
                   fontWeight: FontWeight.w500,
-                  b: 10,
-                  r: 10,
-                  t: 10,
+                  b: 10.0,
+                  r: 10.0,
+                  t: 10.0,
                   onPressed: () {
                     Get.toNamed(AppRoutes.RECOVERY);
                   }),
@@ -104,7 +104,7 @@ class SigninPageMobilePortrait extends GetView<SigninLogic> {
               },
               r: 20.0,
               l: 20.0,
-              b: 10,
+              b: 10.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

@@ -52,7 +52,7 @@ class ResetPageMobilePortrait extends GetView<ResetLogic> {
                   hidden: true,
                   fontWeight: FontWeight.w900,
                   letterSpace: 2.0,
-                  b: 20,
+                  b: 20.0,
                   validator: FormBuilderValidators.compose([
                     FormBuilderValidators.required(
                         errorText: "Password is not given"),
@@ -74,7 +74,7 @@ class ResetPageMobilePortrait extends GetView<ResetLogic> {
                   hidden: true,
                   fontWeight: FontWeight.w900,
                   letterSpace: 2.0,
-                  b: 20,
+                  b: 20.0,
                   validator: FormBuilderValidators.compose([
                     FormBuilderValidators.required(
                         errorText: "Confirm Password is not given"),

@@ -80,7 +80,7 @@ class SignupPageMobilePortrait extends GetView<SignupLogic> {
                     hidden: true,
                     fontWeight: FontWeight.w900,
                     letterSpace: 2.0,
-                    b: 20,
+                    b: 20.0,
                     validator: FormBuilderValidators.compose([
                       FormBuilderValidators.required(
                           errorText: "Password is not given"),
@@ -102,7 +102,7 @@ class SignupPageMobilePortrait extends GetView<SignupLogic> {
                     hidden: true,
                     fontWeight: FontWeight.w900,
                     letterSpace: 2.0,
-                    b: 20,
+                    b: 20.0,
                     validator: FormBuilderValidators.compose([
                       FormBuilderValidators.required(
                           errorText: "Confirm Password is not given"),
@@ -127,7 +127,7 @@ class SignupPageMobilePortrait extends GetView<SignupLogic> {
               },
               r: 20.0,
               l: 20.0,
-              b: 10,
+              b: 10.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
