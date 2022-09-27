@@ -16,14 +16,17 @@ class Views{
     );
   }
 
-  static defAppBarView({texts}){
+  static defAppBarView({texts, actions, center, bottomTexts=''}){
     return AppBar(
-      title: Texts.texts(texts: texts,fontWeight: FontWeight.w500,textSize: FontSizes.BIG,),
+      title: Texts.texts(texts: texts,fontWeight: FontWeight.w400,textSize: FontSizes.BIG,t: 10.0),
+      bottom: PreferredSize(preferredSize: Size.zero, child: Align(
+        alignment: Alignment.centerLeft,
+        child: Texts.texts(texts: bottomTexts,colors: ConstColors.TEXTGREY,fontWeight: FontWeight.w400,textSize: FontSizes.SMALL, l: 14.0),
+      )),
       backgroundColor: ConstColors.BACKGROUND,
-      centerTitle: true,
-      actions: [
-        SvgPicture.asset(Images.scanner_icon),
-      ],
+      centerTitle: center,
+      elevation: 0,
+      actions: actions,
     );
   }
   static appBarView({texts,onPressed}){

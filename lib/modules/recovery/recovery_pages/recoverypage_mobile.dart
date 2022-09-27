@@ -1,5 +1,6 @@
 import 'package:crypto_ui/modules/recovery/recovery_logic.dart';
 import 'package:crypto_ui/routes/app_routes.dart';
+import 'package:crypto_ui/shared/assets/images.dart';
 import 'package:crypto_ui/shared/constants/colors.dart';
 import 'package:crypto_ui/shared/constants/font_sizes.dart';
 import 'package:crypto_ui/widgets/buttons.dart';
@@ -8,6 +9,7 @@ import 'package:crypto_ui/widgets/texts.dart';
 import 'package:crypto_ui/widgets/views.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:get/get.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -23,7 +25,16 @@ class RecoveryPageMobilePortrait extends GetView<RecoveryLogic> {
     Get.find<RecoveryLogic>();
     return Scaffold(
       backgroundColor: ConstColors.BACKGROUND,
-      appBar: Views.defAppBarView(texts: "Password recovery"),
+      appBar: Views.defAppBarView(
+        texts: "Password recovery",
+        center: true,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
+            child: SvgPicture.asset(Images.scanner_icon),
+          ),
+        ],
+      ),
       body: Column(
         children: [
           FormBuilder(
@@ -31,7 +42,7 @@ class RecoveryPageMobilePortrait extends GetView<RecoveryLogic> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Texts.texts(texts: "Mail", l: 20.0),
+                Texts.texts(texts: "Mail", l: 20.0, t: 10.0),
                 TextFields.formField(
                   key: controller.recoveryEmailFieldKey,
                   name: 'email',

@@ -1,5 +1,6 @@
 import 'package:crypto_ui/modules/signin/signin_logic.dart';
 import 'package:crypto_ui/routes/app_routes.dart';
+import 'package:crypto_ui/shared/assets/images.dart';
 import 'package:crypto_ui/shared/constants/colors.dart';
 import 'package:crypto_ui/shared/constants/font_sizes.dart';
 import 'package:crypto_ui/widgets/buttons.dart';
@@ -8,6 +9,7 @@ import 'package:crypto_ui/widgets/texts.dart';
 import 'package:crypto_ui/widgets/views.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:get/get.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -23,7 +25,16 @@ class SigninPageMobilePortrait extends GetView<SigninLogic> {
     Get.find<SigninLogic>();
     return Scaffold(
         backgroundColor: ConstColors.BACKGROUND,
-        appBar: Views.defAppBarView(texts: "Sign in"),
+        appBar: Views.defAppBarView(
+          texts: "Sign in",
+          center: true,
+          actions: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
+              child: SvgPicture.asset(Images.scanner_icon),
+            ),
+          ],
+        ),
         body: ListView(
           children: [
             FormBuilder(
@@ -31,7 +42,8 @@ class SigninPageMobilePortrait extends GetView<SigninLogic> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Texts.texts(texts: "Mail", align: TextAlign.left, l: 20.0),
+                  Texts.texts(
+                      texts: "Mail", align: TextAlign.left, l: 20.0, t: 10.0),
                   TextFields.formField(
                     key: controller.emailFieldKey,
                     name: 'email',
@@ -87,7 +99,7 @@ class SigninPageMobilePortrait extends GetView<SigninLogic> {
               onPressed: () {
                 if (controller.signinFormKey.currentState!.validate()) {
                   controller.signinFormKey.currentState!.save();
-                  Get.toNamed(AppRoutes.HOMEPAGE_1);
+                  Get.offNamed(AppRoutes.HOMEPAGE_1);
                 }
               },
               r: 20.0,

@@ -18,19 +18,19 @@ class TextFields {
           hintStyle: Texts.textStyles(textSize: FontSizes.MEDIUM,colors: ConstColors.TEXTGREY,fontWeight: fontWeight,letterSpace: letterSpace),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: const BorderSide(color: ConstColors.FIELD_OUTLINE_FOCUSED),
+            borderSide: const BorderSide(color: ConstColors.FIELD_OUTLINE_FOCUSED,width: 0.0),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: const BorderSide(color: ConstColors.FIELD_OUTLINE_ENABLED),
+            borderSide: const BorderSide(color: ConstColors.FIELD_OUTLINE_ENABLED,width: 0.0),
           ),
           focusedErrorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: const BorderSide(color: ConstColors.FIELD_OUTLINE_ERROR),
+            borderSide: const BorderSide(color: ConstColors.FIELD_OUTLINE_ERROR,width: 0.0),
           ),
           errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: const BorderSide(color: ConstColors.FIELD_OUTLINE_ERROR),
+            borderSide: const BorderSide(color: ConstColors.FIELD_OUTLINE_ERROR,width: 0.0),
           ),
         ),
         validator: validator,
