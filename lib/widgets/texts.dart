@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Texts {
 
-  static texts({texts, colors = ConstColors.TEXTWHITE, textSize = FontSizes.MEDIUM, fontWeight, align=TextAlign.center, l=0.0,t=0.0,r=0.0,b=0.0}) {
+  static texts({texts, colors = ConstColors.TEXTWHITE, textSize = FontSizes.MEDIUM, align=TextAlign.center, fontWeight, l=0.0,t=0.0,r=0.0,b=0.0}) {
     return Padding(
       padding: EdgeInsets.fromLTRB(l,t,r,b),
       child: Text(

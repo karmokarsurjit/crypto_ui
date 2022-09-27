@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:get/get.dart';
 
-class SigninLogic extends GetxController {
-  var signinFormKey = GlobalKey<FormBuilderState>();
-  var emailFieldKey = GlobalKey<FormBuilderFieldState>();
-  var passFieldKey = GlobalKey<FormBuilderFieldState>();
+class RecoveryLogic extends GetxController {
+  var recoveryFormKey = GlobalKey<FormBuilderState>();
+  var recoveryEmailFieldKey = GlobalKey<FormBuilderFieldState>();
 
   @override
   void onInit() {
@@ -14,13 +13,11 @@ class SigninLogic extends GetxController {
 
   @override
   void onReady() {
-    // TODO: implement onReady
     super.onReady();
   }
 
   @override
   void onClose() {
-    // TODO: implement onClose
     super.onClose();
   }
 }

@@ -16,6 +16,16 @@ class Views{
     );
   }
 
+  static defAppBarView({texts}){
+    return AppBar(
+      title: Texts.texts(texts: texts,fontWeight: FontWeight.w500,textSize: FontSizes.BIG,),
+      backgroundColor: ConstColors.BACKGROUND,
+      centerTitle: true,
+      actions: [
+        SvgPicture.asset(Images.scanner_icon),
+      ],
+    );
+  }
   static appBarView({texts,onPressed}){
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20.0),

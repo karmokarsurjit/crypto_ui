@@ -25,12 +25,11 @@ class IntroPageMobilePortrait extends GetView<IntroductionLogic> {
 
       globalFooter: Buttons.regularButton(
           texts: "Start Now",
-          width: double.infinity,
           l: 20.0,
           r: 20.0,
           b: 60.0,
           onPressed: (){
-        Get.offNamed(AppRoutes.SIGNIN);}
+        Get.toNamed(AppRoutes.SIGNIN);}
       ),
       pages: [
 

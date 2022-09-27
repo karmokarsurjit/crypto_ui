@@ -23,75 +23,94 @@ class SigninPageMobilePortrait extends GetView<SigninLogic> {
     Get.find<SigninLogic>();
     return Scaffold(
         backgroundColor: ConstColors.BACKGROUND,
-        body: SafeArea(
-          child: Column(
-            children: [
-              Views.appBarView(
-                  texts: "Sign in",
-                  onPressed: () {
-                    Get.offNamed(AppRoutes.INTRODUCTION);
-                  }),
-              SingleChildScrollView(
-                child: FormBuilder(
-                  key: controller.formKey,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Texts.texts(texts: "Mail",align: TextAlign.left,l: 20.0,r: 20.0),
-                      TextFields.formField(
-                        key: controller.emailFieldKey,
-                        name: 'email',
-                        hint: "Crypto@gmail.com",
-                        inputType: TextInputType.emailAddress,
-                        validator: FormBuilderValidators.compose([
-                          FormBuilderValidators.required(errorText: "Email is empty"),
-                          FormBuilderValidators.email(errorText: "Email is not valid")
-                        ]),
-                        b: 20.0,
-                      ),
-                      Texts.texts(texts: "Password",align: TextAlign.left,l: 20.0,r: 20.0),
-                      TextFields.formField(
-                        key: controller.passFieldKey,
-                        name: 'password',
-                        hint: ". . . . . . . . ",
-                        inputType: TextInputType.visiblePassword,
-                        hidden: true,
-                        fontWeight: FontWeight.w900,
-                        letterSpace: 2.0,
-                        validator: FormBuilderValidators.compose([
-                          FormBuilderValidators.required(errorText: "Password is not given"),
-                          FormBuilderValidators.minLength(8,allowEmpty: false,errorText: "Password must be at least 8 characters")
-                        ]),
-                      ),
-                      Buttons.textButton(texts: "Forgot password?",color: ConstColors.TEXTGREY,align: Alignment.centerRight,fontWeight: FontWeight.w500),
-
-                      Buttons.regularButton(texts: "Sign in",fontWeight: FontWeight.w500,btnColor: ConstColors.BUTTON,textSize: FontSizes.MEDIUM,
-                          onPressed: (){
-                            if(controller.formKey.currentState!.validate()){
-                              controller.formKey.currentState!.save();
-                              Get.toNamed(AppRoutes.SIGNUP);
-                            }
-                          },
-                        r: 20.0,
-                        l: 20.0,
-                      ),
-
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Texts.texts(texts: "You are not registered ?",textSize: FontSizes.REGULAR),
-                          Buttons.textButton(texts: "Create an account",color: ConstColors.BUTTON,fontWeight: FontWeight.w500,textSize: FontSizes.REGULAR,
-                          onPressed: (){
-                            Get.toNamed(AppRoutes.SIGNUP);
-                          }),
-                        ],
-                      ),
-                    ],
+        appBar: Views.defAppBarView(texts: "Sign in"),
+        body: ListView(
+          children: [
+            FormBuilder(
+              key: controller.signinFormKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Texts.texts(texts: "Mail", align: TextAlign.left, l: 20.0),
+                  TextFields.formField(
+                    key: controller.emailFieldKey,
+                    name: 'email',
+                    hint: "Crypto@gmail.com",
+                    inputType: TextInputType.emailAddress,
+                    validator: FormBuilderValidators.compose([
+                      FormBuilderValidators.required(
+                          errorText: "Email is empty"),
+                      FormBuilderValidators.email(
+                          errorText: "Email is not valid")
+                    ]),
+                    b: 20.0,
                   ),
-                ),
+                  Texts.texts(
+                      texts: "Password", align: TextAlign.left, l: 20.0),
+                  TextFields.formField(
+                    key: controller.passFieldKey,
+                    name: 'password',
+                    hint: ". . . . . . . . ",
+                    inputType: TextInputType.visiblePassword,
+                    hidden: true,
+                    fontWeight: FontWeight.w900,
+                    letterSpace: 2.0,
+                    validator: FormBuilderValidators.compose([
+                      FormBuilderValidators.required(
+                          errorText: "Password is not given"),
+                      FormBuilderValidators.minLength(8,
+                          allowEmpty: false,
+                          errorText: "Password must be at least 8 characters")
+                    ]),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+            Align(
+              alignment: Alignment.centerRight,
+              child: Buttons.textButton(
+                  texts: "Forgot password?",
+                  color: ConstColors.TEXTGREY,
+                  fontWeight: FontWeight.w500,
+                  b: 10,
+                  r: 10,
+                  t: 10,
+                  onPressed: () {
+                    Get.toNamed(AppRoutes.RECOVERY);
+                  }),
+            ),
+            Buttons.regularButton(
+              texts: "Sign in",
+              fontWeight: FontWeight.w500,
+              btnColor: ConstColors.BUTTON,
+              textSize: FontSizes.MEDIUM,
+              onPressed: () {
+                if (controller.signinFormKey.currentState!.validate()) {
+                  controller.signinFormKey.currentState!.save();
+                  Get.toNamed(AppRoutes.HOMEPAGE_1);
+                }
+              },
+              r: 20.0,
+              l: 20.0,
+              b: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Texts.texts(
+                    texts: "You are not registered ?",
+                    textSize: FontSizes.REGULAR),
+                Buttons.textButton(
+                    texts: "Create an account",
+                    color: ConstColors.BUTTON,
+                    fontWeight: FontWeight.w500,
+                    textSize: FontSizes.REGULAR,
+                    onPressed: () {
+                      Get.toNamed(AppRoutes.SIGNUP);
+                    }),
+              ],
+            ),
+          ],
         ));
   }
 }

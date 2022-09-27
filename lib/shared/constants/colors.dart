@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 
 class ConstColors {
   static const Color WHITE = Color(0xFFFFFFFF);
-  static const Color TRANSPARENT = Color(0);
+  static const Color TRANSPARENT = Color(0x00000000);
   static const Color GREY = Color(0xFF8D8D8D);
   static const Color BLUE = Color(0xFF4B12EF);
+  static const Color RED = Color(0xFFFD3131);
 
   static const Color BACKGROUND = Color(0xFF141414);
   static const Color BUTTON = Color(0xFF4B12EF);
-  static const Color FIELD_OUTLINE = Color(0xFF8D8D8D);
+  static const Color FIELD_OUTLINE_ENABLED = Color(0xFF8D8D8D);
+  static const Color FIELD_OUTLINE_FOCUSED = Color(0xFFFFFFFF);
+  static const Color FIELD_OUTLINE_ERROR = Color(0xFFFD3131);
 
   static const Color TEXTWHITE = Color(0xFFFFFFFF);
   static const Color TEXTGREY = Color(0xFF8D8D8D);
