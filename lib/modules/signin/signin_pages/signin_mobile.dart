@@ -97,10 +97,10 @@ class SigninPageMobilePortrait extends GetView<SigninLogic> {
               btnColor: ConstColors.BUTTON,
               textSize: FontSizes.MEDIUM,
               onPressed: () {
-                if (controller.signinFormKey.currentState!.validate()) {
-                  controller.signinFormKey.currentState!.save();
+                // if (controller.signinFormKey.currentState!.validate()) {
+                //   controller.signinFormKey.currentState!.save();
                   Get.offNamed(AppRoutes.HOMEPAGE_1);
-                }
+               // }
               },
               r: 20.0,
               l: 20.0,

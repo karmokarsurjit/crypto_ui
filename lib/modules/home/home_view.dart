@@ -1,5 +1,5 @@
-import 'package:crypto_ui/modules/home/home_pages/homepage1_mobile.dart';
-import 'package:crypto_ui/modules/home/home_pages/homepage1_tablet.dart';
+import 'package:crypto_ui/modules/home/home_pages/homepages_mobile.dart';
+import 'package:crypto_ui/modules/home/home_pages/homepages_tablet.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_builder/responsive_builder.dart';

@@ -1,0 +1,31 @@
+<svg width="55" height="37" viewBox="0 0 55 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_b_1_834)">
+<ellipse cx="19.25" cy="18.2239" rx="13.75" ry="13.806" fill="white" fill-opacity="0.3"/>
+</g>
+<g filter="url(#filter1_b_1_834)">
+<path d="M50.05 18.2239C50.05 25.8487 43.8939 32.0298 36.3 32.0298C28.7061 32.0298 22.55 25.8487 22.55 18.2239C22.55 10.5991 28.7061 4.41791 36.3 4.41791C43.8939 4.41791 50.05 10.5991 50.05 18.2239Z" fill="white" fill-opacity="0.7"/>
+</g>
+<g filter="url(#filter2_b_1_834)">
+<path d="M27.7751 7.39099C24.5923 9.91961 22.5501 13.8323 22.5501 18.2239C22.5501 22.6155 24.5923 26.5282 27.7751 29.0568C30.9579 26.5282 33.0001 22.6155 33.0001 18.2239C33.0001 13.8323 30.9579 9.91961 27.7751 7.39099Z" fill="#232323" fill-opacity="0.6"/>
+</g>
+<defs>
+<filter id="filter0_b_1_834" x="-44.5" y="-45.5821" width="127.5" height="127.612" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImage" stdDeviation="25"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_834"/>
+<feBlend in="SourceGraphic" in2="effect1_backgroundBlur_1_834" result="shape"/>
+</filter>
+<filter id="filter1_b_1_834" x="-27.45" y="-45.5821" width="127.5" height="127.612" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImage" stdDeviation="25"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_834"/>
+<feBlend in="SourceGraphic" in2="effect1_backgroundBlur_1_834" result="shape"/>
+</filter>
+<filter id="filter2_b_1_834" x="-27.4499" y="-42.609" width="110.45" height="121.666" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImage" stdDeviation="25"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_834"/>
+<feBlend in="SourceGraphic" in2="effect1_backgroundBlur_1_834" result="shape"/>
+</filter>
+</defs>
+</svg>
