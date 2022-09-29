@@ -1,7 +1,10 @@
 import 'package:crypto_ui/modules/home/home_logic.dart';
+import 'package:crypto_ui/modules/home/home_pages/sub_pages/trading_page.dart';
+import 'package:crypto_ui/modules/home/home_pages/sub_pages/wallet_page.dart';
+import 'package:crypto_ui/modules/home/home_pages/sub_pages/welcome_page.dart';
+import 'package:crypto_ui/routes/app_routes.dart';
 import 'package:crypto_ui/shared/assets/images.dart';
 import 'package:crypto_ui/shared/constants/colors.dart';
-import 'package:crypto_ui/widgets/views.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -10,7 +13,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 class HomePageMobilePortrait extends GetView<HomeLogic> {
   final SizingInformation? sizingInformation;
 
-  const HomePageMobilePortrait({Key? key, this.sizingInformation, onTap})
+  const HomePageMobilePortrait({Key? key, this.sizingInformation})
       : super(key: key);
 
   @override
@@ -18,51 +21,43 @@ class HomePageMobilePortrait extends GetView<HomeLogic> {
     Get.find<HomeLogic>();
     return Scaffold(
       backgroundColor: ConstColors.BACKGROUND,
-      appBar: Views.defAppBarView(
-        texts: "Hello Vlad",
-        bottomTexts: " Welcome Back",
-        actions: [
-          const Padding(
-            padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 0.0),
-            child: IconButton(
-                onPressed: null,
-                icon: Icon(
-                  Icons.notifications_outlined,
-                  color: ConstColors.WHITE,
-                )),
-          ),
-        ],
-      ),
-      body: [
-        const Text(
-          'Index 0: Home', style: TextStyle(color: Colors.cyan),
-        ),
-        const Text(
-          'Index 1: Business', style: TextStyle(color: Colors.cyan),
-        ),
-        const Text(
-          'Index 2: School', style: TextStyle(color: Colors.cyan),
-        ),
-        const Text(
-          'Index 3: School', style: TextStyle(color: Colors.cyan),
-        ),
-      ].elementAt(controller.selectedIndex.toInt()),
-      bottomNavigationBar: BottomNavigationBar(
+      body: Obx(() {
+        return IndexedStack(
+          index: controller.selectedIndex.value,
+          children: [
+            WelcomePage.welcomePage(context: context),
+            TradingPage.tradingPage(),
+            WalletPage.walletPage(),
+          ],
+        );
+      }),
+      bottomNavigationBar: Obx(() {
+        return BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           backgroundColor: ConstColors.BACKGROUND,
           unselectedItemColor: ConstColors.WHITE,
+          selectedItemColor: ConstColors.BLUE,
           items: [
             const BottomNavigationBarItem(
               icon: Icon(Icons.grid_view_outlined), label: '',),
             BottomNavigationBarItem(
-                icon: SvgPicture.asset(Images.navigation_icon2), label: ''),
+                icon: SvgPicture.asset(Images.navigation_icon2), label: '',activeIcon: SvgPicture.asset(Images.navigation_icon2,color: ConstColors.BLUE), ),
             const BottomNavigationBarItem(
                 icon: Icon(Icons.account_balance_wallet_outlined), label: ''),
             const BottomNavigationBarItem(
                 icon: Icon(Icons.person_outline), label: ''),
           ],
-          currentIndex: controller.selectedIndex.toInt(),
-      ),
+          currentIndex: controller.selectedIndex.value,
+          onTap: (index) {
+            if(index == 3){
+              Get.toNamed(AppRoutes.INTRODUCTION);
+            }
+            else {
+              controller.changePage(index);
+            }
+          },
+        );
+      }),
     );
   }
 }

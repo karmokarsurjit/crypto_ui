@@ -6,10 +6,11 @@ import 'package:crypto_ui/widgets/views.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class TradingPage {
-  static tradingPage() {
-    return Column(children: [
-      Views.appBarView(titleTexts: "Trading",icon: const Icon(Icons.notifications_outlined,color: ConstColors.WHITE),),
+class WalletPage {
+  static walletPage() {
+    return Column(
+        children: [
+      Views.appBarView(titleTexts: "Wallet ",icon: const Icon(Icons.notifications_outlined,color: ConstColors.WHITE),),
       Container(
         padding: const EdgeInsets.all(18),
         height: 220,
@@ -82,7 +83,7 @@ class TradingPage {
           ],
         ),
       ),
-      Texts.texts(texts: "Trading Page",textSize: FontSizes.EXTRALARGE,align: TextAlign.center),
+      Texts.texts(texts: "Wallet Page",textSize: FontSizes.EXTRALARGE,align: TextAlign.center),
     ]);
   }
 }

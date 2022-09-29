@@ -6,7 +6,7 @@ class Images{
   static const intro_image3 = "assets/images/intro_image3.png";
   static const scanner_icon = "assets/icons/scanner.svg";
   static const navigation_icon2 = "assets/icons/chart_line.svg";
-  static const card_chip = "assets/icons/card_chip.svg";
+  static const card_chip = "assets/icons/card_chip.png";
   static const card_contactless = "assets/icons/card_contactless.svg";
   static const card_mastercard = "assets/icons/card_mastercard.svg";
 

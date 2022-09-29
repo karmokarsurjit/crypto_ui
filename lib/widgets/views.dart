@@ -1,9 +1,7 @@
-import 'package:crypto_ui/shared/assets/images.dart';
 import 'package:crypto_ui/shared/constants/colors.dart';
 import 'package:crypto_ui/shared/constants/font_sizes.dart';
 import 'package:crypto_ui/widgets/texts.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 class Views{
@@ -29,7 +27,7 @@ class Views{
       actions: actions,
     );
   }
-  static appBarView({texts,onPressed}){
+  static appBarViewBack({texts,onPressedBack,onPressedIcon,icon}){
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20.0),
       child: Container(
@@ -42,10 +40,41 @@ class Views{
           children: [
             IconButton(
               icon: const Icon(Icons.arrow_back,color: ConstColors.WHITE,),
-              onPressed: () => onPressed(),
+              onPressed: () => onPressedBack(),
             ),
             Texts.texts(texts: texts,fontWeight: FontWeight.w500,textSize: FontSizes.BIG,),
-            SvgPicture.asset(Images.scanner_icon),
+            IconButton(
+              icon: icon,
+              onPressed: () => onPressedIcon(),
+            ),
+            // SvgPicture.asset(Images.scanner_icon),
+          ],
+        ),
+      ),
+    );
+  }
+  static appBarView({titleTexts,bottomTexts='',icon,onPressedIcon}){
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 18.0),
+      child: Container(
+        width: double.infinity,
+        height: 60,
+        padding: const EdgeInsets.symmetric(vertical: 0.0,horizontal: 10.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Texts.texts(texts: titleTexts,fontWeight: FontWeight.w500,textSize: FontSizes.BIG),
+                  Texts.texts(texts: bottomTexts,colors: ConstColors.TEXTGREY,fontWeight: FontWeight.w400,textSize: FontSizes.SMALL),
+                ],
+            ),
+            IconButton(
+              icon: icon,
+              onPressed: () => onPressedIcon(),
+            ),
           ],
         ),
       ),
