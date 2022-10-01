@@ -50,7 +50,7 @@ class HomePageMobilePortrait extends GetView<HomeLogic> {
           currentIndex: controller.selectedIndex.value,
           onTap: (index) {
             if(index == 3){
-              Get.toNamed(AppRoutes.INTRODUCTION);
+              Get.toNamed(AppRoutes.PROFILE);
             }
             else {
               controller.changePage(index);

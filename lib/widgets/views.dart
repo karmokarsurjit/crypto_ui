@@ -15,7 +15,7 @@ class Views {
     );
   }
 
-  static defAppBarView({texts, actions, center, bottomTexts = ''}) {
+  static defAppBarView({texts, center = true, bottomTexts = '', icon, onPressedIcon}) {
     return AppBar(
       title: Texts.texts(
           texts: texts,
@@ -36,7 +36,15 @@ class Views {
       backgroundColor: ConstColors.BACKGROUND,
       centerTitle: center,
       elevation: 0.0,
-      actions: actions,
+      actions: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
+          child: IconButton(
+            icon: icon,
+            onPressed: () => onPressedIcon(),
+          ),
+        ),
+      ],
     );
   }
 

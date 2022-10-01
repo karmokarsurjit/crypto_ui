@@ -27,13 +27,7 @@ class RecoveryPageMobilePortrait extends GetView<RecoveryLogic> {
       backgroundColor: ConstColors.BACKGROUND,
       appBar: Views.defAppBarView(
         texts: "Password recovery",
-        center: true,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
-            child: SvgPicture.asset(Images.scannerIcon),
-          ),
-        ],
+        icon: SvgPicture.asset(Images.scannerIcon),
       ),
       body: Column(
         children: [

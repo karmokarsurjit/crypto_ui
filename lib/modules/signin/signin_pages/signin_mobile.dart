@@ -27,13 +27,7 @@ class SigninPageMobilePortrait extends GetView<SigninLogic> {
         backgroundColor: ConstColors.BACKGROUND,
         appBar: Views.defAppBarView(
           texts: "Sign in",
-          center: true,
-          actions: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
-              child: SvgPicture.asset(Images.scannerIcon),
-            ),
-          ],
+          icon: SvgPicture.asset(Images.scannerIcon),
         ),
         body: ListView(
           children: [
@@ -99,8 +93,8 @@ class SigninPageMobilePortrait extends GetView<SigninLogic> {
               onPressed: () {
                 // if (controller.signinFormKey.currentState!.validate()) {
                 //   controller.signinFormKey.currentState!.save();
-                  Get.offNamed(AppRoutes.HOMEPAGE_1);
-               // }
+                Get.offNamed(AppRoutes.HOMEPAGE_1);
+                // }
               },
               r: 20.0,
               l: 20.0,

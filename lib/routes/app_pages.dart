@@ -2,6 +2,8 @@ import 'package:crypto_ui/modules/home/home_binding.dart';
 import 'package:crypto_ui/modules/home/home_view.dart';
 import 'package:crypto_ui/modules/introduction/introduction_binding.dart';
 import 'package:crypto_ui/modules/introduction/introduction_view.dart';
+import 'package:crypto_ui/modules/profile/profile_binding.dart';
+import 'package:crypto_ui/modules/profile/profile_view.dart';
 import 'package:crypto_ui/modules/recovery/recovery_binding.dart';
 import 'package:crypto_ui/modules/recovery/recovery_view.dart';
 import 'package:crypto_ui/modules/reset/reset_binding.dart';
@@ -75,6 +77,13 @@ class AppPages{
         page: () => const HomePage(),
         bindings: [
           HomeBinding(),
+        ]
+    ),
+    GetPage(
+        name: AppRoutes.PROFILE,
+        page: () => const ProfilePage(),
+        bindings: [
+          ProfileBinding(),
         ]
     ),
   ];

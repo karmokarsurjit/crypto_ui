@@ -27,13 +27,7 @@ class SignupPageMobilePortrait extends GetView<SignupLogic> {
         backgroundColor: ConstColors.BACKGROUND,
         appBar: Views.defAppBarView(
           texts: "Sign up",
-          center: true,
-          actions: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
-              child: SvgPicture.asset(Images.scannerIcon),
-            ),
-          ],
+          icon: SvgPicture.asset(Images.scannerIcon),
         ),
         body: ListView(
           children: [
