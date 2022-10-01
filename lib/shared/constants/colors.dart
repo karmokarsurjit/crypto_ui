@@ -17,6 +17,11 @@ class ConstColors {
   static const Color TEXTGREY = Color(0xFF8D8D8D);
   static const Color TEXTBLUE = Color(0xFF4B12EF);
 
+  static const Color BTC_BACK_COLOR = Color.fromARGB(50, 246, 84, 62);
+  static const Color ETH_BACK_COLOR = Color.fromARGB(50, 99, 116, 195);
+  static const Color LTC_BACK_COLOR = Color.fromARGB(50, 48, 224, 161);
+  static const Color XRP_BACK_COLOR = Color.fromARGB(50, 99, 143, 254);
+
 }
 
 Color hexToColor(String hex) {

@@ -41,7 +41,7 @@ class HomePageMobilePortrait extends GetView<HomeLogic> {
             const BottomNavigationBarItem(
               icon: Icon(Icons.grid_view_outlined), label: '',),
             BottomNavigationBarItem(
-                icon: SvgPicture.asset(Images.navigation_icon2), label: '',activeIcon: SvgPicture.asset(Images.navigation_icon2,color: ConstColors.BLUE), ),
+                icon: SvgPicture.asset(Images.navigationIcon2), label: '',activeIcon: SvgPicture.asset(Images.navigationIcon2,color: ConstColors.BLUE), ),
             const BottomNavigationBarItem(
                 icon: Icon(Icons.account_balance_wallet_outlined), label: ''),
             const BottomNavigationBarItem(

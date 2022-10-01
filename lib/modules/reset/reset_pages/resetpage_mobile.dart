@@ -31,7 +31,7 @@ class ResetPageMobilePortrait extends GetView<ResetLogic> {
         actions: [
           Padding(
             padding: const EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
-            child: SvgPicture.asset(Images.scanner_icon),
+            child: SvgPicture.asset(Images.scannerIcon),
           ),
         ],
       ),

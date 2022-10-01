@@ -33,11 +33,11 @@ class IntroPageMobilePortrait extends GetView<IntroductionLogic> {
       ),
       pages: [
 
-        Views.pageView(image: Images.intro_image1,texts: "We make crypto clear \n and simple" ),
+        Views.pageView(image: Images.introImage1,texts: "We make crypto clear \n and simple" ),
 
-        Views.pageView(image: Images.intro_image2,texts: "Take your first step into safe, \n secure crypto investing" ),
+        Views.pageView(image: Images.introImage2,texts: "Take your first step into safe, \n secure crypto investing" ),
 
-        Views.pageView(image: Images.intro_image3,texts: "24/7 access to full service \n customer support"),
+        Views.pageView(image: Images.introImage3,texts: "24/7 access to full service \n customer support"),
       ],
 
       showDoneButton: false,
