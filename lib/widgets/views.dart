@@ -1,9 +1,11 @@
+import 'package:crypto_ui/routes/app_routes.dart';
 import 'package:crypto_ui/shared/assets/images.dart';
 import 'package:crypto_ui/shared/constants/colors.dart';
 import 'package:crypto_ui/shared/constants/font_sizes.dart';
 import 'package:crypto_ui/widgets/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 class Views {
@@ -15,7 +17,8 @@ class Views {
     );
   }
 
-  static defAppBarView({texts, center = true, bottomTexts = '', icon, onPressedIcon}) {
+  static defAppBarView(
+      {texts, center = true, bottomTexts = '', icon, onPressedIcon}) {
     return AppBar(
       title: Texts.texts(
           texts: texts,
@@ -50,7 +53,7 @@ class Views {
 
   static appBarView({titleTexts, bottomTexts = '', icon, onPressedIcon}) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 18.0),
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: Container(
         width: double.infinity,
         height: 60.0,
@@ -119,56 +122,61 @@ class Views {
 
   static cardView() {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 0.0, horizontal: 20.0),
-      child: Container(
-        padding: const EdgeInsets.all(20.0),
-        height: 220,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20.0),
-          gradient: const LinearGradient(
-            colors: [
-              Color.fromARGB(255, 86, 86, 86),
-              Color.fromARGB(125, 85, 85, 85),
-              Color.fromARGB(140, 31, 29, 29),
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Align(
-              alignment: Alignment.topRight,
-              child: SvgPicture.asset(
-                Images.cardContactless,
-              ),
-            ),
-            Image.asset(
-              Images.cardChip,
-              alignment: Alignment.topLeft,
-            ),
-            Texts.texts(
-                texts: '1234      5678      9000      0000',
-                t: 20.0,
-                letterSpace: 3.0),
-            Align(
-              alignment: Alignment.topRight,
-              child: SvgPicture.asset(
-                Images.cardMastercard,
-              ),
-            ),
-            Row(
-              children: [
-                Texts.texts(
-                  texts: 'Joy Leroy',
-                  textSize: FontSizes.SMALL,
-                ),
-                Texts.texts(texts: '12/24', textSize: FontSizes.SMALL, l: 30.0),
+      padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
+      child: MaterialButton(
+        onPressed: (){
+          Get.toNamed(AppRoutes.CARDDETAILS);
+        },
+        child: Container(
+          padding: const EdgeInsets.all(20.0),
+          height: 220,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20.0),
+            gradient: const LinearGradient(
+              colors: [
+                Color.fromARGB(255, 86, 86, 86),
+                Color.fromARGB(125, 85, 85, 85),
+                Color.fromARGB(140, 31, 29, 29),
               ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             ),
-          ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Align(
+                alignment: Alignment.topRight,
+                child: SvgPicture.asset(
+                  Images.cardContactless,
+                ),
+              ),
+              Image.asset(
+                Images.cardChip,
+                alignment: Alignment.topLeft,
+              ),
+              Texts.texts(
+                  texts: '1234      5678      9000      0000',
+                  t: 20.0,
+                  letterSpace: 3.0),
+              Align(
+                alignment: Alignment.topRight,
+                child: SvgPicture.asset(
+                  Images.cardMastercard,
+                ),
+              ),
+              Row(
+                children: [
+                  Texts.texts(
+                    texts: 'Joy Leroy',
+                    textSize: FontSizes.SMALL,
+                  ),
+                  Texts.texts(texts: '12/24', textSize: FontSizes.SMALL, l: 30.0),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -267,7 +275,8 @@ class Views {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Texts.texts(texts: cardTitleName, fontWeight: FontWeight.w600),
+                    Texts.texts(
+                        texts: cardTitleName, fontWeight: FontWeight.w600),
                     Image.asset(
                       cryptoImage,
                       width: 20.0,
@@ -307,6 +316,82 @@ class Views {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  static cardDetailsSmallView({currency, value, icon}) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 30.0),
+      child: Container(
+        width: 130.0,
+        height: 30.0,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5.0),
+          gradient: const LinearGradient(colors: [
+            Color.fromARGB(255, 57, 57, 57),
+            Color.fromARGB(125, 85, 85, 85),
+            Color.fromARGB(140, 45, 45, 45),
+          ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Texts.texts(texts: currency, fontWeight: FontWeight.w500,textSize: FontSizes.REGULAR),
+            Texts.texts(texts: value, fontWeight: FontWeight.w500,textSize: FontSizes.REGULAR),
+            Icon(icon, color: ConstColors.WHITE),
+          ],
+        ),
+      ),
+    );
+  }
+
+  static cardDetailsListView(
+      {leftTitleText,
+      leftSubText,
+      rightTitleText,
+      logoBackColor = const Color.fromARGB(30, 255, 236, 234)}) {
+    return Container(
+      width: double.infinity,
+      height: 80.0,
+      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+      child: Row(
+        children: [
+          Container(
+              height: 60.0,
+              width: 60.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20.0),
+                color: logoBackColor,
+              ),
+              child: const SizedBox(
+                width: 10.0,
+                height: 10.0,
+              )),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(leftTitleText,
+                    style: Texts.textStyles(
+                      textSize: FontSizes.MEDIUM,
+                      fontWeight: FontWeight.w500,
+                      colors: ConstColors.TEXTWHITE,
+                    )),
+                Text(leftSubText,
+                    style: Texts.textStyles(
+                      textSize: FontSizes.SMALL,
+                      fontWeight: FontWeight.w300,
+                      colors: ConstColors.GREY,
+                    )),
+              ],
+            ),
+          ),
+          Expanded(child: Texts.texts(texts: rightTitleText,align: TextAlign.right),),
+        ],
       ),
     );
   }

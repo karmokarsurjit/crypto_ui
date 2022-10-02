@@ -6,7 +6,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 import 'profile_logic.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends GetView<ProfileLogic> {
   const ProfilePage({Key? key}) : super(key: key);
 
   @override

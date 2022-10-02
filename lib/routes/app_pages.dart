@@ -1,4 +1,10 @@
+import 'package:crypto_ui/modules/card_details/card_details_binding.dart';
+import 'package:crypto_ui/modules/card_details/card_details_view.dart';
+import 'package:crypto_ui/modules/history/history_binding.dart';
+import 'package:crypto_ui/modules/history/history_view.dart';
 import 'package:crypto_ui/modules/home/home_binding.dart';
+import 'package:crypto_ui/modules/home/home_pages/sub_pages/trading_page.dart';
+import 'package:crypto_ui/modules/home/home_pages/sub_pages/wallet_page.dart';
 import 'package:crypto_ui/modules/home/home_view.dart';
 import 'package:crypto_ui/modules/introduction/introduction_binding.dart';
 import 'package:crypto_ui/modules/introduction/introduction_view.dart';
@@ -14,8 +20,12 @@ import 'package:crypto_ui/modules/signup/signup_binding.dart';
 import 'package:crypto_ui/modules/signup/signup_view.dart';
 import 'package:crypto_ui/modules/splash/splash_binding.dart';
 import 'package:crypto_ui/modules/splash/splash_view.dart';
+import 'package:crypto_ui/modules/transfer/transfer_binding.dart';
+import 'package:crypto_ui/modules/transfer/transfer_view.dart';
 import 'package:crypto_ui/modules/verify/verify_binding.dart';
 import 'package:crypto_ui/modules/verify/verify_view.dart';
+import 'package:crypto_ui/modules/withdraw/withdraw_binding.dart';
+import 'package:crypto_ui/modules/withdraw/withdraw_view.dart';
 import 'package:crypto_ui/routes/app_routes.dart';
 import 'package:get/get.dart';
 
@@ -84,6 +94,34 @@ class AppPages{
         page: () => const ProfilePage(),
         bindings: [
           ProfileBinding(),
+        ]
+    ),
+    GetPage(
+        name: AppRoutes.CARDDETAILS,
+        page: () => const CardDetailsPage(),
+        bindings: [
+          CardDetailsBinding(),
+        ]
+    ),
+    GetPage(
+        name: AppRoutes.WITHDRAW,
+        page: () => const WithdrawPage(),
+        bindings: [
+          WithdrawBinding(),
+        ]
+    ),
+    GetPage(
+        name: AppRoutes.HISTORY,
+        page: () => const HistoryPage(),
+        bindings: [
+          HistoryBinding(),
+        ]
+    ),
+    GetPage(
+        name: AppRoutes.TRANSFER,
+        page: () => const TransferPage(),
+        bindings: [
+          TransferBinding(),
         ]
     ),
   ];

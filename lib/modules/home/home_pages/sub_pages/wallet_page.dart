@@ -15,7 +15,7 @@ class WalletPage {
       ),
       Views.cardView(),
       Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(10.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -58,7 +58,7 @@ class WalletPage {
         ),
       ),
       Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 15 ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
