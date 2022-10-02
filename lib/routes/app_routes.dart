@@ -7,7 +7,7 @@ abstract class AppRoutes{
   static const String RECOVERY = "/recovery";
   static const String VERIFY = "/verify";
   static const String RESET = "/reset";
-  static const String HOMEPAGE_1 = "/homepage1";
+  static const String HOMEPAGE = "/homepage";
   static const String CARDDETAILS = "/cardDetails";
   static const String PROFILE = "/profile";
   static const String WITHDRAW = "/withdraw";

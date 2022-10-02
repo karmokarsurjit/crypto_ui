@@ -18,7 +18,7 @@ class Views {
   }
 
   static defAppBarView(
-      {texts, center = true, bottomTexts = '', icon, onPressedIcon}) {
+      {texts, center = true, bottomTexts = '', icon, onPressedIcon }) {
     return AppBar(
       title: Texts.texts(
           texts: texts,

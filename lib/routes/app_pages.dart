@@ -3,8 +3,6 @@ import 'package:crypto_ui/modules/card_details/card_details_view.dart';
 import 'package:crypto_ui/modules/history/history_binding.dart';
 import 'package:crypto_ui/modules/history/history_view.dart';
 import 'package:crypto_ui/modules/home/home_binding.dart';
-import 'package:crypto_ui/modules/home/home_pages/sub_pages/trading_page.dart';
-import 'package:crypto_ui/modules/home/home_pages/sub_pages/wallet_page.dart';
 import 'package:crypto_ui/modules/home/home_view.dart';
 import 'package:crypto_ui/modules/introduction/introduction_binding.dart';
 import 'package:crypto_ui/modules/introduction/introduction_view.dart';
@@ -83,7 +81,7 @@ class AppPages{
         ]
     ),
     GetPage(
-        name: AppRoutes.HOMEPAGE_1,
+        name: AppRoutes.HOMEPAGE,
         page: () => const HomePage(),
         bindings: [
           HomeBinding(),

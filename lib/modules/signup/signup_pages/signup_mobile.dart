@@ -116,7 +116,7 @@ class SignupPageMobilePortrait extends GetView<SignupLogic> {
               onPressed: () {
                 if (controller.signupFormKey.currentState!.validate()) {
                   controller.signupFormKey.currentState!.save();
-                  Get.offNamed(AppRoutes.HOMEPAGE_1);
+                  Get.offNamed(AppRoutes.HOMEPAGE);
                 }
               },
               r: 20.0,

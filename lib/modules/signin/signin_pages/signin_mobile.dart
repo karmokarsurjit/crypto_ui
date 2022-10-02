@@ -93,7 +93,7 @@ class SigninPageMobilePortrait extends GetView<SigninLogic> {
               onPressed: () {
                 // if (controller.signinFormKey.currentState!.validate()) {
                 //   controller.signinFormKey.currentState!.save();
-                Get.offNamed(AppRoutes.HOMEPAGE_1);
+                Get.offAllNamed(AppRoutes.HOMEPAGE);
                 // }
               },
               r: 20.0,
