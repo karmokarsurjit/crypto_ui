@@ -112,7 +112,7 @@ class SigninPageMobilePortrait extends GetView<SigninLogic> {
                     fontWeight: FontWeight.w500,
                     textSize: FontSizes.REGULAR,
                     onPressed: () {
-                      Get.toNamed(AppRoutes.SIGNUP);
+                      Get.offAllNamed(AppRoutes.SIGNUP);
                     }),
               ],
             ),

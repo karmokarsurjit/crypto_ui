@@ -7,7 +7,7 @@ class SplashLogic extends GetxController {
   void onInit() async {
     super.onInit();
     await Future.delayed(const Duration(seconds: 3));
-    Get.offNamed(AppRoutes.INTRODUCTION);
+    Get.offAllNamed(AppRoutes.INTRODUCTION);
   }
 
   @override

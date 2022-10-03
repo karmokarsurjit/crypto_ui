@@ -28,12 +28,12 @@ class CardDetailsPageMobilePortrait extends GetView<CardDetailsLogic> {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                Views.cardDetailsSmallView(currency: "USD", value: "78,90",icon: Icons.arrow_upward),
-                Views.cardDetailsSmallView(currency: "EUR", value: "78,90",icon: Icons.arrow_downward),
-                Views.cardDetailsSmallView(currency: "GBP", value: "78,90",icon: Icons.arrow_upward),
-                Views.cardDetailsSmallView(currency: "USD", value: "78,90",icon: Icons.arrow_upward),
-                Views.cardDetailsSmallView(currency: "EUR", value: "78,90",icon: Icons.arrow_downward),
-                Views.cardDetailsSmallView(currency: "GBP", value: "78,90",icon: Icons.arrow_upward),
+                Views.cardDetailsSmallView(currency: "USD ", value: " 78,90",icon: Icons.arrow_upward),
+                Views.cardDetailsSmallView(currency: "EUR ", value: " 78,90",icon: Icons.arrow_downward),
+                Views.cardDetailsSmallView(currency: "GBP ", value: " 78,90",icon: Icons.arrow_upward),
+                Views.cardDetailsSmallView(currency: "USD ", value: " 78,90",icon: Icons.arrow_upward),
+                Views.cardDetailsSmallView(currency: "EUR ", value: " 78,90",icon: Icons.arrow_downward),
+                Views.cardDetailsSmallView(currency: "GBP ", value: " 78,90",icon: Icons.arrow_upward),
               ],
             ),
           ),

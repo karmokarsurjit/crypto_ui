@@ -22,13 +22,15 @@ class HomePageMobilePortrait extends GetView<HomeLogic> {
     return Scaffold(
       backgroundColor: ConstColors.BACKGROUND,
       body: Obx(() {
-        return IndexedStack(
-          index: controller.selectedIndex.value,
-          children: [
-            WelcomePage.welcomePage(context: context),
-            TradingPage.tradingPage(),
-            WalletPage.walletPage(),
-          ],
+        return SafeArea(
+          child: IndexedStack(
+            index: controller.selectedIndex.value,
+            children: [
+              WelcomePage.welcomePage(context: context),
+              TradingPage.tradingPage(),
+              WalletPage.walletPage(),
+            ],
+          ),
         );
       }),
       bottomNavigationBar: Obx(() {

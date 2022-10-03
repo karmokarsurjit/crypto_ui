@@ -47,9 +47,9 @@ class ProfilePageMobilePortrait extends GetView<ProfileLogic> {
             child: Row(
               children: [
                 const Icon(Icons.account_circle,
-                    size: 120, color: Color.fromARGB(120, 111, 111, 111)),
+                    size: 100, color: Color.fromARGB(120, 111, 111, 111)),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,14 +58,14 @@ class ProfilePageMobilePortrait extends GetView<ProfileLogic> {
                         'Vilad Belenko',
                         style: Texts.textStyles(
                             colors: ConstColors.TEXTWHITE,
-                            textSize: FontSizes.BIG,
+                            textSize: FontSizes.MEDIUM,
                             fontWeight: FontWeight.w600),
                       ),
                       Text(
                         'vlad.belenko.web@gmail.com',
                         style: Texts.textStyles(
                             colors: ConstColors.GREY,
-                            textSize: FontSizes.MEDIUM,
+                            textSize: FontSizes.REGULAR,
                             fontWeight: FontWeight.w200),
                       ),
                     ],

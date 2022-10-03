@@ -4,6 +4,26 @@ import 'package:crypto_ui/widgets/texts.dart';
 import 'package:flutter/material.dart';
 
 class Buttons {
+
+  static buttons({text,width = double.infinity,height = 60.0,onPressed,value = 0.0,circularValue = 0.0,colorValue, borderColor = ConstColors.BLUE}){
+    return Padding(
+      padding: EdgeInsets.all(value),
+      child: MaterialButton(
+        minWidth: width,
+        height: height,
+        onPressed: () => onPressed (),
+        color: colorValue,
+        shape: RoundedRectangleBorder(
+          side: BorderSide(
+            color:  borderColor,
+          ),
+          borderRadius: BorderRadius.circular(circularValue),
+        ),
+        child: Texts.texts(texts: text),
+      ),
+    );
+  }
+
   static regularButton(
       {btnColor = ConstColors.BUTTON,
       texts,
@@ -72,14 +92,14 @@ class Buttons {
         onPressed: () => onPressed(),
         child: Row(
           children: [
-            Image.asset(icon),
+            Image.asset(icon,width: 30,height: 30),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Text(
                 texts,
                 style: Texts.textStyles(
                     colors: ConstColors.TEXTWHITE,
-                    textSize: FontSizes.BIG,
+                    textSize: FontSizes.MEDIUM,
                     fontWeight: FontWeight.w400),
               ),
             ),

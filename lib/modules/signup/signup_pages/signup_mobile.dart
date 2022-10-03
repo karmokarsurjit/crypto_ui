@@ -50,7 +50,7 @@ class SignupPageMobilePortrait extends GetView<SignupLogic> {
                   Texts.texts(texts: "Mail", align: TextAlign.left, l: 20.0),
                   TextFields.formField(
                     key: controller.signupEmailFieldKey,
-                    name: 'email',
+                    name: 'su_email',
                     hint: "Crypto@gmail.com",
                     inputType: TextInputType.emailAddress,
                     b: 20.0,
@@ -68,7 +68,7 @@ class SignupPageMobilePortrait extends GetView<SignupLogic> {
                       r: 20.0),
                   TextFields.formField(
                     key: controller.signupPassFieldKey,
-                    name: 'password',
+                    name: 'su_password',
                     hint: ". . . . . . . . ",
                     inputType: TextInputType.visiblePassword,
                     hidden: true,
@@ -116,7 +116,7 @@ class SignupPageMobilePortrait extends GetView<SignupLogic> {
               onPressed: () {
                 if (controller.signupFormKey.currentState!.validate()) {
                   controller.signupFormKey.currentState!.save();
-                  Get.offNamed(AppRoutes.HOMEPAGE);
+                  Get.offAllNamed(AppRoutes.HOMEPAGE);
                 }
               },
               r: 20.0,
@@ -135,7 +135,7 @@ class SignupPageMobilePortrait extends GetView<SignupLogic> {
                     fontWeight: FontWeight.w500,
                     textSize: FontSizes.REGULAR,
                     onPressed: () {
-                      Get.toNamed(AppRoutes.SIGNIN);
+                      Get.offAllNamed(AppRoutes.SIGNIN);
                     }),
               ],
             ),

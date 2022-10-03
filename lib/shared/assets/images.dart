@@ -24,5 +24,5 @@ class Images{
   static const statisticIcon ='assets/icons/statistic_icon.png';
   static const portfolioIcon ='assets/icons/portfolio_icon.png';
   static const walletIcon ='assets/icons/wallet_icon.png';
-
+  static const tradingChart1 = "assets/images/trading_chart1.png";
 }

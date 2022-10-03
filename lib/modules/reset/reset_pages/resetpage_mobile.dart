@@ -40,7 +40,7 @@ class ResetPageMobilePortrait extends GetView<ResetLogic> {
                     texts: "Password", align: TextAlign.left, l: 20.0, t: 10.0),
                 TextFields.formField(
                   key: controller.resetPassFieldKey,
-                  name: 'password',
+                  name: 'res_password',
                   hint: ". . . . . . . . ",
                   inputType: TextInputType.visiblePassword,
                   hidden: true,
@@ -62,7 +62,7 @@ class ResetPageMobilePortrait extends GetView<ResetLogic> {
                     r: 20.0),
                 TextFields.formField(
                   key: controller.resetConPassFieldKey,
-                  name: 'con_password',
+                  name: 'res_con_password',
                   hint: ". . . . . . . . ",
                   inputType: TextInputType.visiblePassword,
                   hidden: true,
@@ -88,7 +88,7 @@ class ResetPageMobilePortrait extends GetView<ResetLogic> {
             onPressed: () {
               if (controller.resetFormKey.currentState!.validate()) {
                 controller.resetFormKey.currentState!.save();
-                Get.toNamed(AppRoutes.SIGNIN);
+                Get.offAllNamed(AppRoutes.SIGNIN);
               }
             },
             r: 20.0,

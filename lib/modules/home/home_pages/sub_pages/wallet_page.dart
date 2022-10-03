@@ -10,10 +10,10 @@ class WalletPage {
   static walletPage() {
     return Column(children: [
       Views.appBarView(
-        titleTexts: "Wallet ",
-        icon:
-            const Icon(Icons.notifications_outlined, color: ConstColors.WHITE),
-          onPressedIcon: (){
+          titleTexts: "Wallet ",
+          icon: const Icon(Icons.notifications_outlined,
+              color: ConstColors.WHITE),
+          onPressedIcon: () {
             Get.snackbar(
               'Notification',
               'No new notifications',
@@ -27,8 +27,7 @@ class WalletPage {
               ),
               shouldIconPulse: false,
             );
-          }
-      ),
+          }),
       Views.cardView(),
       Padding(
         padding: const EdgeInsets.all(10.0),
@@ -51,30 +50,34 @@ class WalletPage {
                 cryptoImage: Images.btcLogo,
                 subTitleName: 'Portfolio',
                 currentBalance: '\$40.05',
-                ratioLevel: '+78%'),
+                ratioLevel: '+78%',
+                icon: Icons.arrow_upward),
             Views.smallCardView(
                 cardTitleName: 'ENT',
                 cryptoImage: Images.ethLogo,
                 subTitleName: 'Portfolio',
                 currentBalance: '\$150.05',
-                ratioLevel: '+20%'),
+                ratioLevel: '+20%',
+                icon: Icons.arrow_upward),
             Views.smallCardView(
                 cardTitleName: 'LTC',
                 cryptoImage: Images.ltcLogo,
                 subTitleName: 'Portfolio',
                 currentBalance: '\$90.05',
-                ratioLevel: '-20%'),
+                ratioLevel: '-20%',
+                icon: Icons.arrow_downward),
             Views.smallCardView(
                 cardTitleName: 'XRP',
                 cryptoImage: Images.xrpLogo,
                 subTitleName: 'Portfolio',
                 currentBalance: '\$47.05',
-                ratioLevel: '+9%'),
+                ratioLevel: '+9%',
+                icon: Icons.arrow_upward),
           ],
         ),
       ),
       Padding(
-        padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 15 ),
+        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

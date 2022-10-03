@@ -39,7 +39,7 @@ class RecoveryPageMobilePortrait extends GetView<RecoveryLogic> {
                 Texts.texts(texts: "Mail", l: 20.0, t: 10.0),
                 TextFields.formField(
                   key: controller.recoveryEmailFieldKey,
-                  name: 'email',
+                  name: 're_email',
                   hint: "Crypto@gmail.com",
                   inputType: TextInputType.emailAddress,
                   validator: FormBuilderValidators.compose(
@@ -63,7 +63,7 @@ class RecoveryPageMobilePortrait extends GetView<RecoveryLogic> {
             onPressed: () {
               if (controller.recoveryFormKey.currentState!.validate()) {
                 controller.recoveryFormKey.currentState!.save();
-                Get.toNamed(AppRoutes.VERIFY);
+                Get.offAllNamed(AppRoutes.VERIFY);
               }
             },
             r: 20.0,
